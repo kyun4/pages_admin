@@ -88,25 +88,104 @@ password:""
      </FlatList>
    </View>
 
-   <View style={{width: windowX-22, height: 150, padding: 15,  marginLeft: 10, marginTop: 20, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
-    <Text style = {{fontSize:16, fontWeight:"bold"}}>Monthly Usage</Text>
-    <Text style = {{fontSize:12}}>People's average monthly usage</Text>
-   </View>
+   <View style={{width: windowX-22, height: 200, padding: 15,  marginLeft: 10, marginTop: 20, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
+  
+
+    <View style = {{flexDirection:"row", alignItems:"center", alignContent: "center",justifyContent:"space-between",marginBottom: 20}}>
+       <View style = {{flexDirection:"column"}}>
+        <Text style = {{fontSize:14, fontWeight:"bold"}}>Monthly Usage</Text>
+        <Text style = {{fontSize:10}}>People's average monthly usage as of 2024</Text>
+       </View>
+       <View>
+        <Text style = {{ fontSize: 8, marginRight: 15, marginBottom: 12 }}>View Details </Text>
+       </View>
+    </View>
+
+    <View style = {{ height:125, width:"100%", flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
+      <FlatList style = {{ height: 120 }} data = {[45,4,12,32,90,12,33,90,87,78,45,98]} horizontal renderItem = {({item})=>{
+         
+         return (
+           <View style = {{ width: 15, height: 0, marginRight: 10, borderTopColor: "#EEE", borderTopWidth:100-item, borderBottomColor: "#FD8A02", borderBottomWidth: item }}>
+             
+           </View>
+         )
+       }}></FlatList>
+
+      <FlatList data = {["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"]} horizontal renderItem = {({item})=>{
+          
+          return (<View>
+            <View style = {{width: 20, height: 20, marginRight: 5, marginTop: 5}}><Text style = {{fontSize:8, width: 15}}>{item}</Text></View>
+          </View>)
+       }}></FlatList>
+    </View>
+
+   </View> 
       
-   <View style={{width: windowX-22, height: 150, padding: 15,  marginLeft: 10, marginTop: 20, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
-    <Text style = {{fontSize:16, fontWeight:"bold"}}>Monthly Usage</Text>
-    <Text style = {{fontSize:12}}>People's average monthly usage</Text>
-   </View>
+   <View style={{width: windowX-22, height: 200, padding: 15,  marginLeft: 10, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
+    
+    <View style = {{flexDirection:"row", alignItems:"center", alignContent: "center",justifyContent:"space-between",marginBottom: 20}}>
+       <View style = {{flexDirection:"column"}}>
+        <Text style = {{fontSize:14, fontWeight:"bold"}}>Monthly Additional Users</Text>
+        <Text style = {{fontSize:10}}>User registration per month in 2024</Text>
+       </View>
+       <View>
+        <Text style = {{ fontSize: 8, marginRight: 15, marginBottom: 12 }}>View Details </Text>
+       </View>
+    </View>
+    
+    <View style = {{ height: 125, width:"100%", flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
+      <FlatList data = {[2,12,14,15,29,39,44,43,44,90,67,75]} style = {{ height: 100 }} horizontal renderItem = {({item})=>{
+        
+        return (
+          <View style = {{ width: 15, height: 0, marginRight: 10, borderTopColor: "#EEE", borderTopWidth:100-item, borderBottomColor: "#FD8A02", borderBottomWidth: item }}>
+            
+          </View>
+        )
+      }}></FlatList>
 
-   <View style={{width: windowX-22, height: 150, padding: 15,  marginLeft: 10, marginTop: 20, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
-    <Text style = {{fontSize:16, fontWeight:"bold"}}>Monthly Usage</Text>
-    <Text style = {{fontSize:12}}>People's average monthly usage</Text>
-   </View>
+      <FlatList data = {["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"]} horizontal renderItem = {({item})=>{
+          
+          return (<View>
+            <View style = {{width: 20, height: 20, marginRight: 5, marginTop: 5}}><Text style = {{fontSize:8, width: 15}}>{item}</Text></View>
+          </View>)
+       }}></FlatList>
+    </View>
 
-   <View style={{width: windowX-22, height: 150, padding: 15,  marginLeft: 10, marginTop: 20, marginBottom: 25, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
-    <Text style = {{fontSize:16, fontWeight:"bold"}}>Monthly Usage</Text>
-    <Text style = {{fontSize:12}}>People's average monthly usage</Text>
-   </View>
+   </View> 
+
+    <View style={{width: windowX-22, height: 200, padding: 15,  marginLeft: 10, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor:"#FFF", shadowColor:'#494547', shadowRadius: 35, shadowOpacity:0.1, shadowOffset: {width:-2, height:5},elevation: 10}}>
+      
+      <View style = {{flexDirection:"row", alignItems:"center", alignContent: "center",justifyContent:"space-between",marginBottom: 20}}>
+        <View style = {{flexDirection:"column"}}>
+          <Text style = {{fontSize:14, fontWeight:"bold"}}>Monthly Active Users</Text>
+          <Text style = {{fontSize:10}}>Average Number of Users Monthly in 2024</Text>
+        </View>
+        <View>
+          <Text style = {{ fontSize: 8, marginRight: 15, marginBottom: 12 }}>View Details </Text>
+        </View>
+      </View>
+      
+      <View style = {{ height: 125, width:"100%", flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
+        <FlatList data = {[21,20,14,77,29,79,24,43,44,44,67,95]} style = {{ height: 100 }} horizontal renderItem = {({item})=>{
+          
+          return (
+            <View style = {{ width: 15, height: 0, marginRight: 10, borderTopColor: "#EEE", borderTopWidth:100-item, borderBottomColor: "#FD8A02", borderBottomWidth: item }}>
+              
+            </View>
+          )
+        }}></FlatList>
+
+        <FlatList data = {["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"]} horizontal renderItem = {({item})=>{
+            
+            return (<View>
+              <View style = {{width: 20, height: 20, marginRight: 5, marginTop: 5}}><Text style = {{fontSize:8, width: 15}}>{item}</Text></View>
+            </View>)
+        }}></FlatList>
+      </View>
+
+    </View> 
+
+  
 
    </ScrollView>
 
